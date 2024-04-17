@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"./sudoku"
+	"GoGames/sudoku"
 )
 
 func main() {

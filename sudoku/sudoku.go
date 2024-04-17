@@ -4,7 +4,10 @@ import "fmt"
 
 func DrawCells() {
 	for i := 0; i < 10; i++ {
-		fmt.Println(0)
+		for j := 0; j < 10; j++ {
+			fmt.Print(" ", 0, " ")
+		}
+		fmt.Println()
 	}
 }
 
