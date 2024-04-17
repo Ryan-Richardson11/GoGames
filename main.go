@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"./sudoku"
+)
 
 func main() {
+	sudoku.DrawCells()
 	fmt.Println("Environment Test")
 }
