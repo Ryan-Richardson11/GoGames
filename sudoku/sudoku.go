@@ -1,11 +1,36 @@
 package sudoku
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
+
+func findValue(value int, arr []int) bool {
+	for _, i := range arr {
+		if i == value {
+			return true
+		}
+	}
+	return false
+}
+
+func generateRandomNumber() int {
+	randomNumber := rand.Intn(10)
+	return randomNumber
+}
 
 func DrawCells() {
-	for i := 0; i < 10; i++ {
-		for j := 0; j < 10; j++ {
-			fmt.Print(" ", 0, " ")
+	cellLines := [3]int{2, 5, 8}
+	for i := 0; i < 9; i++ {
+		for j := 0; j < 9; j++ {
+			fmt.Print(" ", generateRandomNumber(), " ")
+			if findValue(j, cellLines[:]) {
+				fmt.Print("|")
+			}
+		}
+		fmt.Println()
+		if findValue(i, cellLines[:]) {
+			fmt.Print("------------------------------")
 		}
 		fmt.Println()
 	}
