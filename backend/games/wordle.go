@@ -1,7 +1,3 @@
-package wordle
+package games
 
 // Connects to dictionary API
-
-func word_check() {
-
-}
